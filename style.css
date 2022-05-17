@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+    background-color:rgb(253, 253, 253);
+    font-size: 17px;
+    /* new line I added to center the text and the img*/ 
+    text-align: center;
+    display: block;
+    max-height: 100%;
+    
+  
+  }
+  
+
+  /* The code that prevents page content from shifting as the scrollbar appears/disappears*/
+html { margin-left: calc(100vw - 100%); }
+
+    p {
+    margin: 24px ;
+    line-height: 1.5;
+    
+}
+
+
+.wrapper {
+      padding: 70px;
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      /* new line I added to center the text and the img*/ 
+      text-align: center;
+}
+
+.UDE_LOGO {
+  width: 100%;
+  margin-top: -10%;
+  position: center;
+  
+}
+ 
+.UDE_LOGO_MODAL1 {
+
+  width: 9%;
+  margin-left: -40%;
+  margin-bottom: 0%;
+  display: inline-block;
+  position: relative;
+ padding: 0px 15%;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+  filter: grayscale(100%);
+}
+
+.UDE_LOGO_MODAL1:hover {
+ 
+  width: 9%;
+  margin-left: -40%;
+  margin-bottom: 0%;
+  display: inline-block;
+  position: relative;
+  padding: 0px 15%;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+  transform: scale(1.05);
+  filter: grayscale(0%);
+  transition: 0.3s;
+}
+.cookie-container {
+font-family: 'Poppins', sans-serif;
+position: fixed;
+bottom: -100%;
+left: 0;
+right: 0;
+background: #414141fa;
+color: #f5f6fa;
+padding: 10px 4%;
+box-shadow: 0 -10px 25px rgba(255, 255, 255, 0.61);
+transition: 1500ms;
+z-index:2;
+
+
+}
+
+
+.cookie-container.active  {
+    bottom: 0;
+    
+     
+}
+.cookie-container.active  {
+  bottom: 0;
+  
+   
+}
+
+.cookie-container a {
+color: #2381d8;
+}
+
+
+.Accept-btn {
+  font-family: 'Poppins', sans-serif;
+background-color: rgba(221, 221, 221, 0.733);
+border: none;
+color: black;
+padding: 12px 25px;
+text-align: center;
+font-size: 18px;
+margin-bottom: 16px;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.35s;
+  }
+    
+.Accept-btn:hover {
+background-color: #3e8e41ad;
+color: rgb(255, 255, 255);
+transform: translateY(0px);
+transform: scale(1.00);
+}
+
+  
+
+
+.Customise-btn {
+  font-family: 'Poppins', sans-serif;
+background-color: rgba(221, 221, 221, 0.733);
+border: none;
+color: rgb(0, 0, 0);
+padding: 12px 22px;
+text-align: center;
+font-size: 18px;
+margin-bottom: 16px;
+margin: 10px;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.35s;
+    
+  }
+.Customise-btn:hover {
+background-color: #3e8e41ad;
+color: white;
+transform: translateY(0px);
+transform: scale(1.00);
+}
+ 
+/* Positioning of the Gear "Customise" button */
+img.GearButton {
+  position: fixed;
+  opacity: .6;
+  bottom: -0px;
+  left: -0px;
+  width: 55px;
+  height: 55px; 
+  z-index: 1;
+  transition: all .4s ease;
+  
+  
+}
+
+img.GearButton:hover {
+  
+  cursor: pointer;
+  opacity: 1;
+  transform: rotate(135deg);
+  
+   }
+
+   
+  /* Styling for the Accept & exit and Accept_all buttons in the pop up window */
+#Accept_selected {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(104, 104, 104, 0.712);
+  border: 0;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 1.8% 3%;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.2s;
+  position: relative;
+}
+#Accept_selected:hover {
+  
+  background-color: #3e8e41;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  padding: 1.8% 3%;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+#Accept_all {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(104, 104, 104, 0.712);
+  border: 0;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  padding: 1.8% 8%;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.2s;
+  position: relative;
+  
+}
+    #Accept_all:hover {
+
+      background-color: #3e8e41;
+      
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      padding: 1.8% 8%;
+      cursor: pointer;
+      margin: 5px;
+     
+        transition: ease-in 0.2s;
+        }
+       
+
+ 
+/* END of Styling for the Accept & exit and Accept_all buttons in the pop up window */
+    /* Main Modal */
+    .modal {
+      background-color: rgb(255, 255, 255);
+      padding: 1.5% 1.7%;
+      border-radius: 15px;
+      box-shadow: 0px 0px 40px rgba(17, 27, 51, 0.76);
+      width: 491px;
+      max-height: 70%;
+      max-width: 30%;
+      text-align: center; 
+      overflow: hidden;
+      overflow-y: scroll;
+      
+    }
+    .modal a {
+      color: #2381d8;
+      }
+
+/* Making the vertical Scroll-bar of the Body invisible, so that when modal is open, everything wont jump to the right 
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    */
+
+   /* Making the vertical Scroll-bar invisible, because it makes the modal look bad */
+.modal::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+  }
+  /* Hide scrollbar for IE, Edge add Firefox */
+.modal::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+    .modal-container {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(2.5px);
+      
+      
+    }
+    .modal-container.show {
+      pointer-events: auto;
+      opacity: 1;
+      
+      
+    } 
+    
+    .modal h1 {
+      font-size: 20px;
+      margin: 0;
+      color: rgb(0, 0, 0);
+       padding: 0px;   
+          
+    }
+    .modal p {
+      font-size: 15px;
+      opacity: 0.85;
+      color: rgb(0, 0, 0);
+      padding: 0px;
+    }
+    /*End of Main Modal */
+
+    /*Additional Modal*/
+    
+    .modal2 {
+      background-color: #fff;
+      padding: 1.2% 1.4%;
+      padding-bottom: -1%;
+      border-radius: 15px;
+      box-shadow: 0px 0px 40px rgba(17, 27, 51, 0.76);
+      width: 300px;
+      max-height: 45%;
+      max-width: 30%;
+      text-align: center; 
+      overflow: hidden;
+      overflow-y: scroll;
+      
+       
+    }
+
+   /* Making the vertical Scroll-bar invisible, because it makes the modal look bad */
+   .modal2::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+    }
+    /* Hide scrollbar for IE, Edge add Firefox */
+  .modal2::-webkit-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .modal-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0%;
+    left: 450px;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+   
+
+  }
+  .modal-container2.show {
+    pointer-events: auto; 
+    opacity: 1;
+  
+  } 
+  .modal2 h1 {
+    font-size: 19.5px;
+    margin-top: -5%;
+    color: rgb(0, 0, 0);
+     padding: 2px;     
+        
+  }
+  .modal2 p {
+    font-size: 14px;
+    opacity: 0.8;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+  }
+
+/*End of Additional Modal*/
+
+/* Adding styles for the ON/OFF buttons */
+
+.Disabled_Button {
+  margin-top: -5%;
+  margin-left: 2%;
+  --width: 50px;
+  --height: 20px;
+  opacity: 1;
+  color: rgba(207, 17, 17, 0.315);
+  display: block;
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: var(--height);
+  cursor: not-allowed;
+  
+}
+
+/*Beginning of styling for the  Main Accordion*/
+
+.mainBox{  
+  max-width: 500px; 
+  
+ 
+}  
+.DropdownN1, .DropdownN2, .DropdownN3, .DropdownN4, .DropdownN5{  
+  display: block;  
+  background: rgb(238, 238, 238);  
+  padding: 12px;  
+  margin: auto;
+  color: rgb(0, 0, 0);  
+  font-size: 1.2em;  
+  position: relative;  
+  border: 1px solid rgba(17, 93, 207, 0.315);  
+  cursor: pointer;  
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 0px;
+  
+
+}
+
+.DropdownN1::after, .DropdownN2::after, .DropdownN3::after, .DropdownN4::after, .DropdownN5::after {  
+  content: "+";  
+  position: absolute; 
+  top: 16%;  
+  right: 21.5px;  
+  font-size: 1.2em;  
+  color: rgb(43, 90, 151); 
+  transition: transform 0.3s;
+  
+  
+}  
+.content{  
+  height: 0;  
+  overflow: hidden;  
+  transition: .35s;  
+  padding: 5px;
+  
+}  
+.accordion.active .content{  
+  height: 150px;  
+  padding: 0px;  
+
+}  
+.accordion.active .DropdownN1::after, .accordion.active .DropdownN2::after, .accordion.active .DropdownN3::after, .accordion.active .DropdownN4::after, .accordion.active .DropdownN5::after{  
+  content: "-";  
+  top: 13%;  
+  right: 23.5px;
+  transition: all .4s ease; 
+  transform: rotate(180deg);
+  
+}  
+
+/*End of styling for the Main Accordion*/
+
+/*Beginning of styling for the additional Accordion*/
+
+.mainBox2 {  
+  max-width: 500px; 
+  
+}  
+.Dropdown2 {  
+  display: block;  
+  background: rgb(238, 238, 238);  
+  padding: 6px;  
+  margin: auto;
+  color: rgb(0, 0, 0);  
+  font-size: 1.2em;  
+  position: relative;  
+  border: 1px solid rgba(17, 93, 207, 0.315);  
+  cursor: pointer;  
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 0px;
+  
+
+}  
+.Dropdown2::after{  
+  content: "+";  
+  position: absolute; 
+  top: 5%;  
+  right: 21.5px;  
+  font-size: 1.2em;  
+  color: rgb(43, 90, 151); 
+  transition: transform 0.3s;
+  
+}  
+
+.accordion2.active .Dropdown2::after{  
+  content: "-";  
+  top: 5%;  
+  right: 23.5px;
+  transition: all .4s ease; 
+  transform: rotate(180deg);
+  
+} 
+.content2{  
+  height: 0;  
+  overflow: hidden;  
+  transition: .35s;  
+  padding: 5px;
+  
+}  
+.accordion2.active .content{  
+  height: 150px;  
+  padding-bottom: 0%;  
+
+}  
+ 
+/*End of styling for the additional Accordion*/
+
+ 
+/*Toggle switch*/
+label {
+  margin-top: -5%;
+  margin-left: 2%;
+  --width: 50px;
+  --height: 20px;
+  display: block;
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: var(--height);
+  cursor: pointer;
+
+}
+
+label input {
+  display: none;
+}
+
+label .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--height);
+  background-color: #ccc;
+  transition: all 0.3s ease-in-out;
+  content: "";
+}
+
+label .slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--height));
+  height: calc(var(--height));
+  border-radius: calc(var(--height) / 2);
+  background-color: #4b4b4b;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+label input:checked+.slider {
+  background-color: #56c939;
+}
+
+/*Styles for the Disabled button*/
+label.Disabled_Button .slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--height));
+  height: calc(var(--height));
+  border-radius: calc(var(--height) / 2);
+  background-color: #949494;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  
+}
+
+
+label.Disabled_Button input:checked+.slider {
+  background-color: #2fb90c65;
+  
+}
+/*End of Styles for the Disabled button*/
+label input:checked+.slider::before {
+  transform: translateX(calc(var(--width) - var(--height)));
+}
+
+label .labels {
+  position: absolute;
+  top: 5.5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 9px;
+  font-family: sans-serif;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 25%;
+}
+
+label .labels::after {
+  content: attr(data-off);
+  position: absolute;
+  right: 7px;
+  color: #4d4d4d;
+  opacity: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+label .labels::before {
+  content: attr(data-on);
+  position: absolute;
+  left: calc(var(--height) - var(--width) + 10px);
+  color: #ffffff;
+  opacity: 0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+label input:checked~.labels::after {
+  opacity: 0;
+  transform: translateX(calc(var(--width) - var(--height)));
+}
+
+label input:checked~.labels::before {
+  opacity: 1;
+  transform: translateX(calc(var(--width) - var(--height)));
+}
+
+
+/*START Positioning the additional swithches(From the additional pop-up modal)*/
+
+.switch_bubbling6 {
+  margin-top: 1.9%;
+  margin-left: -61%;
+  --width: 50px;
+  --height: 20px;
+  display: inline-block;
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: var(--height);
+  cursor: pointer;
+
+}
+/*END Positioning the additional swithches(From the additional pop-up modal)*/
+
+
+.close-button {
+  border: none;
+  margin-left: 97%;
+  margin-top: -11.7%;
+  display: block;
+  position: relative;
+  font-size: 30px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #969696e0;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.close-button:hover {
+color: #1f61ac;
+transition: 0.2s;
+}
+
+
+.close-button2 {
+  border: none;
+  margin-left: 95%;
+  margin-top: -10%;
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  padding: -10px -10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #969696e0;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-button2:hover {
+color: #1f61ac;
+transition: 0.2s;
+
+}
+
+.Disable_all_btn {
+  border: none;
+  text-decoration: underline;
+  font-family: 'Poppins', sans-serif;
+  background-color: inherit;
+  padding-bottom: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  transition: ease-in 0.2s;
+  margin-left: 70%;
+  margin-top: -1.5%;
+  position: relative;
+  z-index: 7;
+}
+.Disable_all_btn:hover {
+  color:#2381d8;
+  transition: ease-in 0.2s;
+}
+
+.Clear_local_storage {
+  border: none;
+  text-decoration: underline;
+  font-family: 'Poppins', sans-serif;
+  background-color: inherit;
+  padding-top: -10px;
+  padding-bottom: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  display: inline-block;
+  transition: ease-in 0.2s;
+  margin-left: 0%;
+}
+.Clear_local_storage:hover {
+  color:#2381d8;
+  transition: ease-in 0.2s;
+}
+/* Styles for the Indicator*/
+#switch_state {
+color: rgb(116, 116, 116);
+  margin-top: -25%;
+  margin-right: -150%;
+  font-size: 30px;
+  pointer-events: none;
+}
