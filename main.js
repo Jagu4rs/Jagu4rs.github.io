@@ -16,6 +16,11 @@ const Disable_all_btn = document.querySelector(".Disable_all_btn");
 const Clear_local_storage = document.querySelector(".Clear_local_storage");
 const switch_state = document.getElementById('switch_state');
 
+if (document.body.clientWidth < 1980(px)) {
+  viewport = document.querySelector("meta[name=viewport]");
+  viewport.setAttribute('content', 'width=device-width, initial-scale=0.67, user-scalable=0');
+}
+
 
 
 if (!localStorage.getItem("Necessary")){
