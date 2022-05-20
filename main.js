@@ -57,9 +57,7 @@ document.getElementById("switch8").checked = true;
 document.getElementById("switch9").checked = true;
 document.getElementById("switch10").checked = true;
 document.body.style.overflow = 'visible';
-// Code to change background color back to white when the "Accept cookies" button is clicked
-document.body.style.backgroundColor = "white";
-document.body.style.transitionDuration = "0.5s";
+// Code to change background color of the indicator
 switch_state.style.color = "#56c939";
 switch_state.style.transitionDuration = "0.5s";
 localStorage.setItem("Functional Cookies Indicator Green", "ON")
@@ -71,9 +69,8 @@ Customise.addEventListener('click', () => {
     document.body.style.overflow = 'hidden';
     localStorage.setItem("CookieBannerNotAccepted", "True")
     localStorage.removeItem("CookieBannerAccepted", "True")
-    // Code to change background color back to white when the "Customize" button is clicked
-    document.body.style.backgroundColor = "white";
-    document.body.style.transitionDuration = "1.5s";
+    
+  
     });
 
     Accept_selected.addEventListener('click', () => {
@@ -209,15 +206,7 @@ GearButton.addEventListener('click', () => {
     
     });
 
-
-
-//Code to "block" the main page when the Cookie-container is active
-  if(document.getElementsByClassName(".cookie-container").active = true) {
-     document.body.style.overflow = 'hidden'; }
-     if(localStorage.getItem("CookieBannerAccepted"))
-      document.body.style.overflow = 'visible';
-
-    
+  
     //Code to remember the toggle switch position so that it stays in the same state even after pager refresh.
     if(localStorage.getItem("Functional"))
     document.getElementById("switch2").checked = true;
@@ -438,14 +427,7 @@ setTimeout(() => {
   cookieContainer.classList.add("active");
 
 }, 200);
-
-setTimeout(() => {
-      if(!localStorage.getItem("CookieBannerAccepted")){
-    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    document.body.style.transitionDuration = "1.5s";
-    
-    }}, 700);
-//(END) Code to show cookie banner(from the bottom) if "CookieBannerAccepted" is not stored in Local storage + darkening the body  
+ 
 
 
 // Code to turn all switches in additional modal section on or off if switch responsible for "Functional" is toggled
@@ -730,16 +712,13 @@ else if (localStorage.getItem("Functional Cookies Indicator Green")) {
           if (localStorage.getItem("CookieBannerNotAccepted")){
             modal_container.classList.remove("show");
             cookieContainer.classList.add("active");
-            document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-            document.body.style.transitionDuration = "1.5s";
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'visible'; 
             }
             if (localStorage.getItem("CookieBannerNotAccepted")){
               modal_container.classList.remove("show");
               cookieContainer.classList.add("active");
-              document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-              document.body.style.transitionDuration = "1.5s";
-              document.body.style.overflow = 'hidden';
+              document.body.style.overflow = 'visible'; 
+              
               }
             else if (localStorage.getItem("CookieBannerAccepted")){
               modal_container.classList.remove("show");
@@ -875,11 +854,9 @@ if (accordion[1].classList.contains("active")){
 } 
  if (event2.target == modal_container) {
   if (localStorage.getItem("CookieBannerNotAccepted")) {
-  modal_container.classList.remove('show');
-  document.body.style.overflow = 'hidden';  
+  modal_container.classList.remove('show');  
   cookieContainer.classList.add("active");
-  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-  document.body.style.transitionDuration = "1.5s";
+  document.body.style.overflow = 'visible'; 
     accordion[0].classList.remove("active");
     accordion[1].classList.remove("active");
     accordion[2].classList.remove("active");
