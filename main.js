@@ -472,7 +472,7 @@ setTimeout(() => {
             document.getElementById("switch9").checked == true &&
             document.getElementById("switch10").checked == true ) {
              
-              switch_state.style.color = "green";
+              switch_state.style.color = "#56c939";
               switch_state.style.transitionDuration = "0.5s";
               localStorage.setItem("Functional Cookies Indicator Green","ON")
               localStorage.removeItem("Functional Cookies Indicator Gray")
@@ -486,7 +486,7 @@ setTimeout(() => {
             document.getElementById("switch9").checked == false &&
             document.getElementById("switch10").checked == false ) {
              
-              switch_state.style.color = "green";
+              switch_state.style.color = "#56c939";
               switch_state.style.transitionDuration = "0.5s";
               localStorage.setItem("Functional Cookies Indicator Gray","ON")
               localStorage.removeItem("Functional Cookies Indicator Green")
@@ -516,7 +516,7 @@ setTimeout(() => {
                     document.getElementById("switch9").checked == true &&
                     document.getElementById("switch10").checked == true ) {
                      
-                      switch_state.style.color = "green";
+                      switch_state.style.color = "#56c939";
                       switch_state.style.transitionDuration = "0.5s";
                       localStorage.setItem("Functional Cookies Indicator Green","ON")
                       localStorage.removeItem("Functional Cookies Indicator Gray")
@@ -529,7 +529,7 @@ setTimeout(() => {
                           document.getElementById("switch9").checked == false &&
                           document.getElementById("switch10").checked == false ) {
                            
-                            switch_state.style.color = "green";
+                            switch_state.style.color = "#56c939";
                             switch_state.style.transitionDuration = "0.5s";
                             localStorage.setItem("Functional Cookies Indicator Gray","ON")
                             localStorage.removeItem("Functional Cookies Indicator Green")
@@ -558,7 +558,7 @@ setTimeout(() => {
                             document.getElementById("switch9").checked == true &&
                             document.getElementById("switch10").checked == true ) {
                              
-                              switch_state.style.color = "green";
+                              switch_state.style.color = "#56c939";
                               switch_state.style.transitionDuration = "0.5s";
                               localStorage.setItem("Functional Cookies Indicator Green","ON")
                               localStorage.removeItem("Functional Cookies Indicator Gray")
@@ -571,7 +571,7 @@ setTimeout(() => {
                                   document.getElementById("switch9").checked == false &&
                                   document.getElementById("switch10").checked == false ) {
                                    
-                                    switch_state.style.color = "green";
+                                    switch_state.style.color = "#56c939";
                                     switch_state.style.transitionDuration = "0.5s";
                                     localStorage.setItem("Functional Cookies Indicator Gray","ON")
                                     localStorage.removeItem("Functional Cookies Indicator Green")
@@ -600,7 +600,7 @@ setTimeout(() => {
                                     
                                     document.getElementById("switch10").checked == true ) {
                                      
-                                      switch_state.style.color = "green";
+                                      switch_state.style.color = "#56c939";
                                       switch_state.style.transitionDuration = "0.5s";
                                       localStorage.setItem("Functional Cookies Indicator Green","ON")
                                       localStorage.removeItem("Functional Cookies Indicator Gray")
@@ -613,7 +613,7 @@ setTimeout(() => {
                                           document.getElementById("switch6").checked == false &&
                                           document.getElementById("switch10").checked == false ) {
                                            
-                                            switch_state.style.color = "green";
+                                            switch_state.style.color = "#56c939";
                                             switch_state.style.transitionDuration = "0.5s";
                                             localStorage.setItem("Functional Cookies Indicator Gray","ON")
                                             localStorage.removeItem("Functional Cookies Indicator Green")
@@ -642,7 +642,7 @@ setTimeout(() => {
                                             document.getElementById("switch9").checked == true 
                                             ) {
                                              
-                                              switch_state.style.color = "green";
+                                              switch_state.style.color = "#56c939";
                                               switch_state.style.transitionDuration = "0.5s";
                                               localStorage.setItem("Functional Cookies Indicator Green","ON")
                                               localStorage.removeItem("Functional Cookies Indicator Gray")
@@ -655,7 +655,7 @@ setTimeout(() => {
                                                   document.getElementById("switch9").checked == false &&
                                                   document.getElementById("switch6").checked == false ) {
                                                    
-                                                    switch_state.style.color = "green";
+                                                    switch_state.style.color = "#56c939";
                                                     switch_state.style.transitionDuration = "0.5s";
                                                     localStorage.setItem("Functional Cookies Indicator Gray","ON")
                                                     localStorage.removeItem("Functional Cookies Indicator Green")
@@ -684,7 +684,7 @@ else if (localStorage.getItem("Functional Cookies Indicator Orange")) {
           
 }
 else if (localStorage.getItem("Functional Cookies Indicator Green")) {
-  switch_state.style.color = "green";
+  switch_state.style.color = "#56c939";
           
 }
 
@@ -712,14 +712,21 @@ else if (localStorage.getItem("Functional Cookies Indicator Green")) {
           if (localStorage.getItem("CookieBannerNotAccepted")){
             modal_container.classList.remove("show");
             cookieContainer.classList.add("active");
+            localStorage.setItem("Functional Cookies Indicator Gray","ON")
             document.body.style.overflow = 'visible'; 
+            localStorage.removeItem("Functional Cookies Indicator Green")
+            localStorage.removeItem("Functional Cookies Indicator Orange")
+            switch_state.style.color = "rgb(116, 116, 116)";
+            document.getElementById("switch2").checked = false;
+            document.getElementById("switch3").checked = false;
+            document.getElementById("switch4").checked = false;
+            document.getElementById("switch5").checked = false;
+            document.getElementById("switch6").checked = false;
+            document.getElementById("switch7").checked = false;
+            document.getElementById("switch8").checked = false;
+            document.getElementById("switch9").checked = false;
+            document.getElementById("switch10").checked = false;
             }
-            if (localStorage.getItem("CookieBannerNotAccepted")){
-              modal_container.classList.remove("show");
-              cookieContainer.classList.add("active");
-              document.body.style.overflow = 'visible'; 
-              
-              }
             else if (localStorage.getItem("CookieBannerAccepted")){
               modal_container.classList.remove("show");
               document.body.style.overflow = 'visible';
@@ -856,6 +863,20 @@ if (accordion[1].classList.contains("active")){
   if (localStorage.getItem("CookieBannerNotAccepted")) {
   modal_container.classList.remove('show');  
   cookieContainer.classList.add("active");
+  localStorage.setItem("Functional Cookies Indicator Gray","ON")
+  switch_state.style.color = "rgb(116, 116, 116)";
+  switch_state.style.transitionDuration = "0.5s";
+  localStorage.removeItem("Functional Cookies Indicator Green")
+  localStorage.removeItem("Functional Cookies Indicator Orange")
+  document.getElementById("switch2").checked = false;
+  document.getElementById("switch3").checked = false;
+  document.getElementById("switch4").checked = false;
+  document.getElementById("switch5").checked = false;
+  document.getElementById("switch6").checked = false;
+  document.getElementById("switch7").checked = false;
+  document.getElementById("switch8").checked = false;
+  document.getElementById("switch9").checked = false;
+  document.getElementById("switch10").checked = false;
   document.body.style.overflow = 'visible'; 
     accordion[0].classList.remove("active");
     accordion[1].classList.remove("active");
