@@ -658,7 +658,7 @@ label input:checked~.labels::before {
   margin-left: 97%;
   margin-top: -11.7%;
   display: block;
-  position: relativez;
+  position: relative;
   font-size: 30px;
   overflow: hidden;
   text-decoration: none;

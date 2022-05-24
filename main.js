@@ -731,9 +731,80 @@ else if (localStorage.getItem("Functional Cookies Indicator Green")) {
               modal_container.classList.remove("show");
               document.body.style.overflow = 'visible';
               
+            }
+            //(START) Code for the toggle-switches and toggle-state indicator to stay in the same states if "Disable_all" is clicked but then not "Confirmed" and just closed instead.
+              
+              if (localStorage.getItem("Functional")){
+                document.getElementById("switch2").checked = true;
               }
-          });
-   
+              if (localStorage.getItem("Functional Cookie #1")){
+                document.getElementById("switch6").checked = true;
+              }
+              if (localStorage.getItem("Functional Cookie #2")){
+                document.getElementById("switch7").checked = true;
+              }
+              if (localStorage.getItem("Functional Cookie #3")){
+                document.getElementById("switch8").checked = true;
+              }
+              if (localStorage.getItem("Functional Cookie #4")){
+                document.getElementById("switch9").checked = true;
+              }
+              if (localStorage.getItem("Functional Cookie #5")){
+                document.getElementById("switch10").checked = true;
+              }
+              if (localStorage.getItem("Analytics")){
+                document.getElementById("switch3").checked = true;
+              }
+              if (localStorage.getItem("Marketing")){
+                document.getElementById("switch4").checked = true;
+              }
+
+              if (localStorage.getItem("Personalisation")){
+                document.getElementById("switch5").checked = true;
+              }
+
+
+              if(document.getElementById("switch6").checked == true &&
+                 document.getElementById("switch7").checked == true &&
+                 document.getElementById("switch8").checked == true &&
+                 document.getElementById("switch9").checked == true &&
+                 document.getElementById("switch10").checked == true 
+                ) 
+                { switch_state.style.color = "#56c939";
+                  switch_state.style.transitionDuration = "0.5s";
+                  localStorage.setItem("Functional Cookies Indicator Green","ON")
+                  localStorage.removeItem("Functional Cookies Indicator Gray")
+                  localStorage.removeItem("Functional Cookies Indicator Orange")}
+
+                  if(document.getElementById("switch6").checked == false ||
+                  document.getElementById("switch7").checked == false ||
+                  document.getElementById("switch8").checked == false ||
+                  document.getElementById("switch9").checked == false ||
+                  document.getElementById("switch10").checked == false 
+                 ) 
+                 { switch_state.style.color = "orange";
+                   switch_state.style.transitionDuration = "0.5s";
+                   localStorage.setItem("Functional Cookies Indicator Orange","ON")
+                   localStorage.removeItem("Functional Cookies Indicator Green")
+                   localStorage.removeItem("Functional Cookies Indicator Gray")
+                  
+                   if(document.getElementById("switch6").checked == false &&
+                  document.getElementById("switch7").checked == false &&
+                  document.getElementById("switch8").checked == false &&
+                  document.getElementById("switch9").checked == false &&
+                  document.getElementById("switch10").checked == false ) 
+                  {
+                    switch_state.style.color = "rgb(116, 116, 116)";
+                  switch_state.style.transitionDuration = "0.5s";
+                  localStorage.setItem("Functional Cookies Indicator Gray","ON")
+                  localStorage.removeItem("Functional Cookies Indicator Green")
+                  localStorage.removeItem("Functional Cookies Indicator Orange")
+                  }
+                  }
+              });
+   //(END) Code for the toggle-switches and toggle-state indicator to stay in the same states if "Disable_all" is clicked but then not "Confirmed" and just closed instead.
+
+
           close_additional_modal.addEventListener('click', () =>   {
             if (accordion[1].classList.contains("active")){
           additional_modal_container.classList.remove("show");
@@ -903,6 +974,75 @@ else if (localStorage.getItem("CookieBannerAccepted")) {
     accordion2[3].classList.remove("active");
     accordion2[4].classList.remove("active");
 }
+//(Start) Code for the toggle-switches and toggle-state indicator to stay in the same states if "Disable_all" is clicked but then not "Confirmed" and just closed instead.
+if (localStorage.getItem("Functional")){
+  document.getElementById("switch2").checked = true;
+}
+if (localStorage.getItem("Functional Cookie #1")){
+  document.getElementById("switch6").checked = true;
+}
+if (localStorage.getItem("Functional Cookie #2")){
+  document.getElementById("switch7").checked = true;
+}
+if (localStorage.getItem("Functional Cookie #3")){
+  document.getElementById("switch8").checked = true;
+}
+if (localStorage.getItem("Functional Cookie #4")){
+  document.getElementById("switch9").checked = true;
+}
+if (localStorage.getItem("Functional Cookie #5")){
+  document.getElementById("switch10").checked = true;
+}
+if (localStorage.getItem("Analytics")){
+  document.getElementById("switch3").checked = true;
+}
+if (localStorage.getItem("Marketing")){
+  document.getElementById("switch4").checked = true;
+}
+
+if (localStorage.getItem("Personalisation")){
+  document.getElementById("switch5").checked = true;
+}
+
+
+if(document.getElementById("switch6").checked == true &&
+   document.getElementById("switch7").checked == true &&
+   document.getElementById("switch8").checked == true &&
+   document.getElementById("switch9").checked == true &&
+   document.getElementById("switch10").checked == true 
+  ) 
+  { switch_state.style.color = "#56c939";
+    switch_state.style.transitionDuration = "0.5s";
+    localStorage.setItem("Functional Cookies Indicator Green","ON")
+    localStorage.removeItem("Functional Cookies Indicator Gray")
+    localStorage.removeItem("Functional Cookies Indicator Orange")}
+
+    if(document.getElementById("switch6").checked == false ||
+    document.getElementById("switch7").checked == false ||
+    document.getElementById("switch8").checked == false ||
+    document.getElementById("switch9").checked == false ||
+    document.getElementById("switch10").checked == false 
+   ) 
+   { switch_state.style.color = "orange";
+     switch_state.style.transitionDuration = "0.5s";
+     localStorage.setItem("Functional Cookies Indicator Orange","ON")
+     localStorage.removeItem("Functional Cookies Indicator Green")
+     localStorage.removeItem("Functional Cookies Indicator Gray")
+    
+     if(document.getElementById("switch6").checked == false &&
+    document.getElementById("switch7").checked == false &&
+    document.getElementById("switch8").checked == false &&
+    document.getElementById("switch9").checked == false &&
+    document.getElementById("switch10").checked == false ) 
+    {
+      switch_state.style.color = "rgb(116, 116, 116)";
+    switch_state.style.transitionDuration = "0.5s";
+    localStorage.setItem("Functional Cookies Indicator Gray","ON")
+    localStorage.removeItem("Functional Cookies Indicator Green")
+    localStorage.removeItem("Functional Cookies Indicator Orange")
+    }
+    }
+    //(END) Code for the toggle-switches and toggle-state indicator to stay in the same states if "Disable_all" is clicked but then not "Confirmed" and just closed instead.
    else {
      modal_container.classList.remove('show')
     
