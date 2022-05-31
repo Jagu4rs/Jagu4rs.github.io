@@ -655,10 +655,10 @@ label input:checked~.labels::before {
 
 .close-button {
   border: none;
-  margin-left: 5.5%;
-  margin-top: -0.5%;
- display: inline-block;
-  position: absolute;
+  margin-left: 96.5%;
+  margin-top: -13%;
+ display: block;
+  position: relative;
   font-size: 30px;
   overflow: hidden;
   text-decoration: none;
