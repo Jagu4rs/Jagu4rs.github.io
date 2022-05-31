@@ -655,16 +655,15 @@ label input:checked~.labels::before {
 
 .close-button {
   border: none;
-  margin-left: 97%;
-  margin-top: -11.7%;
-  display: block;
-  position: relative;
+  margin-left: 5.5%;
+  margin-top: -0.5%;
+ display: inline-block;
+  position: absolute;
   font-size: 30px;
   overflow: hidden;
   text-decoration: none;
   color: #969696e0;
   background-color: inherit;
-  text-align: center;
   cursor: pointer;
   transition: 0.2s;
   z-index: 10;
