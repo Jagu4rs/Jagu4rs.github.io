@@ -737,31 +737,39 @@ else if (localStorage.getItem("Functional Cookies Indicator Green")) {
               if (localStorage.getItem("Functional")){
                 document.getElementById("switch2").checked = true;
               }
+              else {document.getElementById("switch2").checked = false;}
               if (localStorage.getItem("Functional Cookie #1")){
                 document.getElementById("switch6").checked = true;
               }
+              else {document.getElementById("switch6").checked = false;}
               if (localStorage.getItem("Functional Cookie #2")){
                 document.getElementById("switch7").checked = true;
               }
+              else {document.getElementById("switch7").checked = false;}
               if (localStorage.getItem("Functional Cookie #3")){
                 document.getElementById("switch8").checked = true;
               }
+              else {document.getElementById("switch8").checked = false;}
               if (localStorage.getItem("Functional Cookie #4")){
                 document.getElementById("switch9").checked = true;
               }
+              else {document.getElementById("switch9").checked = false;}
               if (localStorage.getItem("Functional Cookie #5")){
                 document.getElementById("switch10").checked = true;
               }
+              else {document.getElementById("switch10").checked = false;}
               if (localStorage.getItem("Analytics")){
                 document.getElementById("switch3").checked = true;
               }
+              else {document.getElementById("switch3").checked = false;}
               if (localStorage.getItem("Marketing")){
                 document.getElementById("switch4").checked = true;
               }
-
+              else {document.getElementById("switch4").checked = false;}
               if (localStorage.getItem("Personalisation")){
                 document.getElementById("switch5").checked = true;
               }
+              else {document.getElementById("switch5").checked = false;}
 
 
               if(document.getElementById("switch6").checked == true &&
@@ -978,31 +986,39 @@ else if (localStorage.getItem("CookieBannerAccepted")) {
 if (localStorage.getItem("Functional")){
   document.getElementById("switch2").checked = true;
 }
+else {document.getElementById("switch2").checked = false;}
 if (localStorage.getItem("Functional Cookie #1")){
   document.getElementById("switch6").checked = true;
 }
+else {document.getElementById("switch6").checked = false;}
 if (localStorage.getItem("Functional Cookie #2")){
   document.getElementById("switch7").checked = true;
 }
+else {document.getElementById("switch7").checked = false;}
 if (localStorage.getItem("Functional Cookie #3")){
   document.getElementById("switch8").checked = true;
 }
+else {document.getElementById("switch8").checked = false;}
 if (localStorage.getItem("Functional Cookie #4")){
   document.getElementById("switch9").checked = true;
 }
+else {document.getElementById("switch9").checked = false;}
 if (localStorage.getItem("Functional Cookie #5")){
   document.getElementById("switch10").checked = true;
 }
+else {document.getElementById("switch10").checked = false;}
 if (localStorage.getItem("Analytics")){
   document.getElementById("switch3").checked = true;
 }
+else {document.getElementById("switch3").checked = false;}
 if (localStorage.getItem("Marketing")){
   document.getElementById("switch4").checked = true;
 }
-
+else {document.getElementById("switch4").checked = false;}
 if (localStorage.getItem("Personalisation")){
   document.getElementById("switch5").checked = true;
 }
+else {document.getElementById("switch5").checked = false;}
 
 
 if(document.getElementById("switch6").checked == true &&
