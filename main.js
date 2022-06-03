@@ -951,7 +951,8 @@ if (accordion[1].classList.contains("active")){
  if (event2.target == modal_container) {
   if (localStorage.getItem("CookieBannerNotAccepted")) {
     additional_modal_container.classList.remove('show'); 
-  modal_container.classList.remove('show');  
+  modal_container.classList.remove('show'); 
+  additional_modal_container.classList.remove('show');  
    localStorage.setItem("Additional Modal" , "InActive");
   cookieContainer.classList.add("active");
   localStorage.setItem("Functional Cookies Indicator Gray","ON")
@@ -982,6 +983,8 @@ if (accordion[1].classList.contains("active")){
 }
 else if (localStorage.getItem("CookieBannerAccepted")) {
   modal_container.classList.remove('show');
+  additional_modal_container.classList.remove('show');  
+   localStorage.setItem("Additional Modal" , "InActive");
   document.body.style.overflow = 'visible'; 
   accordion[0].classList.remove("active");
     accordion[1].classList.remove("active");
