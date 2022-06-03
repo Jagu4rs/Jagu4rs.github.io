@@ -16,6 +16,13 @@ const Disable_all_btn = document.querySelector(".Disable_all_btn");
 const Clear_local_storage = document.querySelector(".Clear_local_storage");
 const switch_state = document.getElementById('switch_state');
 
+
+
+
+
+
+
+
 if (document.body.clientWidth < 1982) {
   viewport = document.querySelector("meta[name=viewport]");
   viewport.setAttribute('content', 'width=device-width, initial-scale=0.67, user-scalable=0');
@@ -76,6 +83,7 @@ Customise.addEventListener('click', () => {
     Accept_selected.addEventListener('click', () => {
       modal_container.classList.remove('show');
       document.body.style.overflow = 'visible';
+      localStorage.setItem("Additional Modal", "InActive");
       localStorage.setItem("Necessary", "ON");
       localStorage.setItem("CookieBannerAccepted", "True")
       localStorage.removeItem("CookieBannerNotAccepted", "True")
@@ -150,6 +158,7 @@ Customise.addEventListener('click', () => {
     modal_container.classList.remove("show");
     localStorage.removeItem("CookieBannerNotAccepted", "True")
     document.body.style.overflow = 'visible';
+    localStorage.setItem("Additional Modal", "InActive");
     // Storing all cookies with the value "ON" if Accept all button is clicked.
     localStorage.setItem("Necessary", "ON")
      localStorage.setItem("Functional", "ON")
@@ -930,6 +939,7 @@ window.onclick = function(event2) {
 if (accordion[1].classList.contains("active")){
   if (event2.target == additional_modal_container) {
     additional_modal_container.classList.remove('show');
+    localStorage.setItem("Additional Modal" , "InActive"); 
     !accordion[1].classList.remove("active");
     accordion2[0].classList.remove("active");
     accordion2[1].classList.remove("active");
@@ -940,7 +950,9 @@ if (accordion[1].classList.contains("active")){
 } 
  if (event2.target == modal_container) {
   if (localStorage.getItem("CookieBannerNotAccepted")) {
+    additional_modal_container.classList.remove('show'); 
   modal_container.classList.remove('show');  
+   localStorage.setItem("Additional Modal" , "InActive");
   cookieContainer.classList.add("active");
   localStorage.setItem("Functional Cookies Indicator Gray","ON")
   switch_state.style.color = "rgb(116, 116, 116)";
@@ -1069,4 +1081,45 @@ if(document.getElementById("switch6").checked == true &&
 
  //(END) code to close main modal on click outside and close additional modal with minimising the "Functional" accordion
 
-   
+//(START) code to keep the right toggle-switch state indicator color if it was changed, not confirmed and page refreshed.
+
+ if(document.getElementById("switch6").checked == true &&
+   document.getElementById("switch7").checked == true &&
+   document.getElementById("switch8").checked == true &&
+   document.getElementById("switch9").checked == true &&
+   document.getElementById("switch10").checked == true 
+  ) 
+  { switch_state.style.color = "#56c939";
+    switch_state.style.transitionDuration = "0.5s";
+    localStorage.setItem("Functional Cookies Indicator Green","ON")
+    localStorage.removeItem("Functional Cookies Indicator Gray")
+    localStorage.removeItem("Functional Cookies Indicator Orange")}
+
+    if(document.getElementById("switch6").checked == false ||
+    document.getElementById("switch7").checked == false ||
+    document.getElementById("switch8").checked == false ||
+    document.getElementById("switch9").checked == false ||
+    document.getElementById("switch10").checked == false 
+   ) 
+   { switch_state.style.color = "orange";
+     switch_state.style.transitionDuration = "0.5s";
+     localStorage.setItem("Functional Cookies Indicator Orange","ON")
+     localStorage.removeItem("Functional Cookies Indicator Green")
+     localStorage.removeItem("Functional Cookies Indicator Gray")
+}
+    
+     if(document.getElementById("switch6").checked == false &&
+    document.getElementById("switch7").checked == false &&
+    document.getElementById("switch8").checked == false &&
+    document.getElementById("switch9").checked == false &&
+    document.getElementById("switch10").checked == false ) 
+    {
+      switch_state.style.color = "rgb(116, 116, 116)";
+    switch_state.style.transitionDuration = "0.5s";
+    localStorage.setItem("Functional Cookies Indicator Gray","ON")
+    localStorage.removeItem("Functional Cookies Indicator Green")
+    localStorage.removeItem("Functional Cookies Indicator Orange")
+    }
+
+    //(END) code to keep the right toggle-switch state indicator color if it was changed, not confirmed and page refreshed.
+    
